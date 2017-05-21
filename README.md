@@ -8,7 +8,7 @@ cl /Fe:[outfile].dll /LD msf_template_nothread.c
 
 or mingw:
 
-i686-w64-mingw32-gcc hijack.c -o hijack.dll -shared -s [-lws2_32] 
+i686-w64-mingw32-gcc msf_template_nothread.c -o hijack.dll -shared -s [-lws2_32] 
 
 # DllForwarding
 
