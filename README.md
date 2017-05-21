@@ -8,7 +8,7 @@ cl /Fe:[outfile].dll /LD msf_template_nothread.c
 
 or mingw:
 
-i686-w64-mingw32-gcc hijack.c -o hijack.dll -shared [-lws2_32] [strip]
+i686-w64-mingw32-gcc hijack.c -o hijack.dll -shared -s [-lws2_32] 
 
 # DllForwarding
 
@@ -18,4 +18,4 @@ python dllexportdump.py user32.dll user32_real.dll > forward.def
 
 Then compile hijack.dll in combination with the .def file:
 
-i686-w64-mingw32-gcc hijack.c -o hijack.dll -shared strip forward.def
+i686-w64-mingw32-gcc hijack.c -o hijack.dll -shared -s forward.def
