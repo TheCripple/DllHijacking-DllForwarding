@@ -14,7 +14,7 @@ i686-w64-mingw32-gcc hijack.c -o hijack.dll -shared [-lws2_32] [strip]
 
 Use the dllexportdump.py script to create .def file.
 
-python dllexportdump.py user32.dll
+python dllexportdump.py user32.dll user32_real.dll > forward.def
 
 Then compile hijack.dll in combination with the .def file:
 
