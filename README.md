@@ -18,4 +18,4 @@ python dllexportdump.py user32.dll user32_real.dll > forward.def
 
 Then compile hijack.dll in combination with the .def file:
 
-i686-w64-mingw32-gcc hijack.c -o hijack.dll -shared -s forward.def
+i686-w64-mingw32-gcc msf_template_nothread.c -o forward_hijack.dll -shared -s forward.def
