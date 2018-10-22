@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#Created by vivek
+#Created by Vivek Ramachandran from pentester academy
 
 import sys, pefile
 
@@ -25,6 +25,3 @@ for exp in pe.DIRECTORY_ENTRY_EXPORT.symbols:
                         print "%s=%s.%s @%d" % (exp.name, newDllName, exp.name, exp.ordinal)
 	else :
                         print "ord%d=%s.ord%d @%d NONAME" %(exp.ordinal, newDllName, exp.ordinal, exp.ordinal)
-
-
-
